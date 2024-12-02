@@ -308,6 +308,7 @@
 
 .carousel-inner .carousel-item {
   transition: transform 1s ease-in-out;
+  
 }
 
 /* Style for Carousel Controls with Arrow Images */
@@ -792,16 +793,106 @@ cursor: pointer;
             <div class="box1" style="display: flex; flex-direction: row;">
                 <p style="color: rgb(0, 0, 0); margin: 8px 10px 8px 0; font-weight: 1000; font-size: large;">Our</p>
          
-                <p style="color: red; margin: 8px 10px 8px 0; font-weight: 1000; font-size: large;">services</p>
+                <p style="color: red; margin: 8px 10px 8px 0; font-weight: 1000; font-size: large;">Gallery</p>
                
             </div>
         </div>
 
 
 
-
-
-
+        <div id="carouselCustom" class="carousel miniCarousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselCustom" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselCustom" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselCustom" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner miniCarousel-inner">
+            <div class="carousel-item miniCarousel-item active">
+              <img src="1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item miniCarousel-item">
+              <img src="2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item miniCarousel-item">
+              <img src="3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselCustom" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselCustom" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        
+        <style>
+          #carouselCustom {
+            width: 70%;
+            height: 70%;
+            margin: 40px auto;
+           
+          }
+          .miniCarousel{
+            border-radius: 40px;
+          }
+        
+          .miniCarousel-inner {
+            border-radius: 40px;
+          }
+        
+          .carousel-control-prev,
+          .carousel-control-next {
+            border-radius: 40px;
+          }
+        
+          @media (max-width: 768px) {
+            .carousel-item img {
+              border-radius: 10px;
+            }
+        
+            .miniCarousel {
+              border-radius: 10px;
+            }
+        
+            .miniCarousel-inner {
+              border-radius: 10px;
+            }
+          }
+        
+          .miniCarousel-item img {
+            border-radius: 40px;
+            transition: transform 0.5s ease-in-out;
+          }
+        
+          .miniCarousel-item {
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+          }
+        
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+          }
+        
+          /* Round indicators */
+          .carousel-indicators button {
+            background-color: red !important;
+            border: none;
+            margin: 3px;
+            width: 14px !important;
+            height: 14px !important;
+            border-radius: 50% !important;
+            transition: background-color 0.3s ease;
+          }
+        
+          .carousel-indicators .active {
+            background-color: rgba(0, 0, 0, 0.9);
+          }
+        </style>
+        
 
 
 
